@@ -25,21 +25,18 @@ const testimonials = [
 
 export const Testimonials = () => {
     return (
-        <section className="py-20 md:py-32 relative overflow-hidden">
-            {/* Fixed Spotlights */}
-            <div className="absolute top-0 right-0 w-96 h-96 bg-primary/[0.08] rounded-full blur-3xl pointer-events-none -z-10" />
-            <div className="absolute bottom-0 left-0 w-96 h-96 bg-cyan-bright/[0.06] rounded-full blur-3xl pointer-events-none -z-10" />
+        <section className="py-20 sm:py-24 md:py-32 relative overflow-hidden">
 
-            <div className="container mx-auto px-4 relative z-10">
+            <div className="container mx-auto px-4 sm:px-6 relative z-10">
                 {/* Header */}
-                <div className="text-center max-w-3xl mx-auto mb-16">
+                <div className="text-center max-w-3xl mx-auto mb-12 sm:mb-14 md:mb-16">
                     <motion.div
                         initial={{ opacity: 0, y: 20 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
-                        transition={{ duration: 0.6 }}
+                        transition={{ duration: 0.6, ease: [0.4, 0, 0.2, 1] }}
                     >
-                        <h2 className="text-4xl md:text-5xl font-bold mb-6">
+                        <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 sm:mb-5 md:mb-6">
                             <span className="text-white">What Our </span>
                             <span className="text-gradient">Clients Say</span>
                         </h2>
@@ -50,19 +47,19 @@ export const Testimonials = () => {
                 </div>
 
                 {/* Testimonials Grid */}
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-7 md:gap-8">
                     {testimonials.map((testimonial, index) => (
                         <motion.div
                             key={index}
                             initial={{ opacity: 0, scale: 0.9 }}
                             whileInView={{ opacity: 1, scale: 1 }}
                             viewport={{ once: true }}
-                            transition={{ duration: 0.5, delay: index * 0.15 }}
+                            transition={{ duration: 0.5, delay: index * 0.1, ease: [0.4, 0, 0.2, 1] }}
                             whileHover={{ y: -10, scale: 1.03 }}
-                            className="p-6 rounded-2xl glass border border-white/10 hover:border-primary/30 transition-all duration-500 group relative"
+                            className="p-5 sm:p-6 rounded-2xl glass border border-white/10 hover:border-primary/30 transition-all duration-500 group relative"
                         >
                             {/* Inner Spotlight */}
-                            <div className="absolute inset-0 rounded-2xl bg-gradient-to-br from-white/[0.06] via-primary/[0.03] to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                            <div className="absolute inset-0 rounded-2xl bg-gradient-to-br from-white/[0.05] via-white/[0.02] to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
 
                             <div className="relative z-10">
                                 {/* Stars */}

@@ -5,7 +5,7 @@ import Link from "next/link";
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
 import { Newsletter } from "@/components/Newsletter";
-import { StickyFilter } from "@/components/StickyFilter";
+import { BlogFilter } from "@/components/BlogFilter";
 import { Calendar, Clock, ArrowRight } from "lucide-react";
 
 // Metadata is set in layout.tsx for client components
@@ -96,7 +96,7 @@ export default function BlogPage() {
             </section>
 
             {/* Filter - Sticky */}
-            <StickyFilter
+            <BlogFilter
                 categories={categories}
                 activeCategory={activeCategory}
                 onCategoryChange={setActiveCategory}

@@ -26,11 +26,8 @@ const projects = [
 
 export const FeaturedWork = () => {
     return (
-        <section className="py-20 md:py-32 bg-dark-secondary/50 relative overflow-hidden">
-            {/* Fixed Spotlight */}
-            <div className="absolute top-1/2 right-0 w-[500px] h-[500px] bg-white/10 rounded-full blur-3xl pointer-events-none -z-10" />
-
-            <div className="container mx-auto px-4 relative z-10">
+        <section className="py-20 sm:py-24 md:py-32 relative overflow-hidden">
+            <div className="container mx-auto px-4 sm:px-6 relative z-10">
                 {/* Header */}
                 <div className="flex flex-col md:flex-row justify-between items-start md:items-center mb-16 gap-6">
                     <div>

@@ -4,7 +4,7 @@ import { useState } from "react";
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
 import { Newsletter } from "@/components/Newsletter";
-import { StickyFilter } from "@/components/StickyFilter";
+import { PortfolioFilter } from "@/components/PortfolioFilter";
 import { ExternalLink } from "lucide-react";
 
 // Metadata is set in layout.tsx for client components
@@ -83,7 +83,7 @@ export default function PortfolioPage() {
             </section>
 
             {/* Filter */}
-            <StickyFilter
+            <PortfolioFilter
                 categories={categories}
                 activeCategory={activeCategory}
                 onCategoryChange={setActiveCategory}

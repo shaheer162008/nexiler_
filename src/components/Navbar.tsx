@@ -42,20 +42,26 @@ export const Navbar = () => {
     }, [mobileMenuOpen]);
 
     return (
-        <header
-            className="fixed top-0 left-0 right-0 z-50 bg-[#00040F] border-b border-white/10 shadow-lg overflow-hidden"
-        >
-            {/* Smooth Ambient Lighting */}
-            <div className="absolute inset-0 -z-10 overflow-hidden pointer-events-none">
+        <header className="fixed top-0 left-0 right-0 z-50 backdrop-blur-xl border-b border-white/10 shadow-lg overflow-hidden">
+            {/* Navbar Gradient Effect - More Visible */}
+            <div className="absolute inset-0 -z-10 bg-gradient-to-b from-[#00040F] via-[#00040F]/95 to-[#00040F]/85" />
+            <div className="absolute inset-0 -z-10">
                 <div 
-                    className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[200px] opacity-30"
+                    className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-full"
                     style={{
-                        background: 'radial-gradient(ellipse at center, rgba(255, 255, 255, 0.12) 0%, rgba(255, 255, 255, 0.04) 50%, transparent 80%)',
-                        filter: 'blur(80px)',
+                        background: 'radial-gradient(ellipse 100% 150% at 50% 0%, rgba(51, 187, 207, 0.15), rgba(51, 187, 207, 0.08) 40%, transparent 70%)',
+                        filter: 'blur(40px)',
+                    }}
+                />
+                <div 
+                    className="absolute inset-0"
+                    style={{
+                        background: 'linear-gradient(90deg, rgba(51, 187, 207, 0.05) 0%, transparent 50%, rgba(51, 187, 207, 0.05) 100%)',
                     }}
                 />
             </div>
-            <div className="container mx-auto px-4 md:px-6">
+            
+            <div className="container mx-auto px-4 md:px-6 relative z-10">
                 <div className="flex items-center justify-between h-16 md:h-20">
                     {/* Logo */}
                     <div className="flex-shrink-0">

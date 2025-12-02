@@ -1,18 +1,26 @@
 "use client";
 import { motion } from "framer-motion";
 
-interface StickyFilterProps {
+interface PortfolioFilterProps {
     categories: string[];
     activeCategory: string;
     onCategoryChange: (category: string) => void;
 }
 
-export const StickyFilter = ({ categories, activeCategory, onCategoryChange }: StickyFilterProps) => {
+export const PortfolioFilter = ({ categories, activeCategory, onCategoryChange }: PortfolioFilterProps) => {
     return (
-        <section className="py-6 border-y border-white/10 sticky top-16 md:top-20 z-40 bg-[#00040F] overflow-hidden relative">
-            {/* Smooth Spotlight Effect */}
+        <section className="py-6 border-y border-white/10 sticky top-16 md:top-20 z-40 backdrop-blur-xl overflow-hidden relative">
+            {/* Enhanced Gradient Effect */}
+            <div className="absolute inset-0 -z-10 bg-gradient-to-r from-[#00040F] via-[#00040F]/95 to-[#00040F]" />
             <div className="absolute inset-0 -z-10 overflow-hidden pointer-events-none">
-                <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[200px] bg-primary/[0.1] rounded-full blur-[90px] animate-pulse" style={{ animationDuration: '4s' }} />
+                <div 
+                    className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[200px]"
+                    style={{
+                        background: 'radial-gradient(ellipse at center, rgba(51, 187, 207, 0.15), rgba(51, 187, 207, 0.08) 50%, transparent 80%)',
+                        filter: 'blur(50px)',
+                        animation: 'pulse 4s ease-in-out infinite',
+                    }}
+                />
             </div>
             <div className="container mx-auto px-4">
                 <div className="flex flex-wrap justify-center gap-3">
