@@ -9,7 +9,7 @@ const config: Config = {
     theme: {
         extend: {
             fontFamily: {
-                sans: ['"Inter"', 'system-ui', '-apple-system', 'sans-serif'],
+                sans: ['"Montserrat"', 'system-ui', '-apple-system', 'sans-serif'],
             },
             container: {
                 center: true,

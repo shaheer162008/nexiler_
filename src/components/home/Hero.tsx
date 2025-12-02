@@ -44,10 +44,10 @@ export const Hero = () => {
                                 initial={{ opacity: 0, y: 30 }}
                                 animate={{ opacity: 1, y: 0 }}
                                 transition={{ duration: 0.8, delay: 0.2, ease: [0.4, 0, 0.2, 1] }}
-                                className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold mb-4 sm:mb-5 md:mb-6 leading-[1.1]"
+                                className="text-5xl md:text-7xl font-bold mb-4 sm:mb-5 md:mb-6 leading-[1.1]"
                             >
-                                <span className="block text-white mb-2 sm:mb-3">Transform Your</span>
-                                <span className="block text-gradient">Business with AI</span>
+                                <span className="text-white">Transform Your</span>{' '}
+                                <span className="text-gradient">Business with AI</span>
                             </motion.h1>
 
                             {/* Subheadline */}
@@ -55,7 +55,7 @@ export const Hero = () => {
                                 initial={{ opacity: 0, y: 20 }}
                                 animate={{ opacity: 1, y: 0 }}
                                 transition={{ duration: 0.8, delay: 0.4, ease: [0.4, 0, 0.2, 1] }}
-                                className="text-base sm:text-lg md:text-xl lg:text-2xl text-white/70 mb-6 sm:mb-8 md:mb-10 leading-relaxed max-w-xl mx-auto lg:mx-0"
+                                className="text-lg sm:text-xl md:text-xl lg:text-2xl text-white/70 mb-6 sm:mb-8 md:mb-10 leading-relaxed max-w-xl mx-auto lg:mx-0"
                             >
                                 Custom AI automation solutions and traditional development services tailored to your unique needs.
                                 We build intelligent systems that scale your business exponentially.
@@ -88,7 +88,7 @@ export const Hero = () => {
                                 initial={{ opacity: 0, y: 20 }}
                                 animate={{ opacity: 1, y: 0 }}
                                 transition={{ duration: 0.8, delay: 0.8, ease: [0.4, 0, 0.2, 1] }}
-                                className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-2 xl:grid-cols-4 gap-4 sm:gap-5 md:gap-6 lg:gap-8"
+                                className="grid grid-cols-2 sm:grid-cols-4 gap-6 sm:gap-8 max-w-3xl mx-auto lg:mx-0"
                             >
                                 {[
                                     { value: "3900+", label: "Active Users" },
@@ -102,10 +102,10 @@ export const Hero = () => {
                                         transition={{ duration: 0.3, ease: [0.4, 0, 0.2, 1] }}
                                         className="text-center lg:text-left"
                                     >
-                                        <div className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-gradient mb-1 sm:mb-2">
+                                        <div className="text-2xl sm:text-3xl md:text-4xl font-bold text-gradient mb-1">
                                             {stat.value}
                                         </div>
-                                        <div className="text-xs sm:text-sm md:text-base text-white/50">
+                                        <div className="text-xs sm:text-sm text-white/50">
                                             {stat.label}
                                         </div>
                                     </motion.div>
