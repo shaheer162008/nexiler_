@@ -66,7 +66,7 @@ export const Hero = () => {
                                 initial={{ opacity: 0, y: 20 }}
                                 animate={{ opacity: 1, y: 0 }}
                                 transition={{ duration: 0.8, delay: 0.6, ease: [0.4, 0, 0.2, 1] }}
-                                className="flex flex-col sm:flex-row items-center lg:items-start gap-3 sm:gap-4 mb-8 sm:mb-10 md:mb-12"
+                                className="flex flex-col md:flex-row md:justify-center lg:justify-start gap-3 sm:gap-4 mb-8 sm:mb-10 md:mb-12"
                             >
                                 <Link
                                     href="/contact"
@@ -139,7 +139,7 @@ export const Hero = () => {
                                 initial={{ opacity: 0 }}
                                 whileHover={{ opacity: 1 }}
                                 transition={{ duration: 0.5 }}
-                                className="absolute -inset-4 bg-gradient-to-r from-primary/10 to-cyan-400/10 blur-3xl -z-10 rounded-3xl pointer-events-none"
+                                className="absolute -inset-4 bg-linear-to-r from-primary/10 to-cyan-400/10 blur-3xl -z-10 rounded-3xl pointer-events-none"
                             />
                         </motion.div>
                     </div>

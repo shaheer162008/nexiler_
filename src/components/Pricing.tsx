@@ -86,7 +86,7 @@ export const Pricing = () => {
                 </div>
 
                 {/* Pricing Cards - Mobile First Grid */}
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-7 md:gap-8 max-w-7xl mx-auto">
+                <div className="grid grid-cols-1 lg:grid-cols-3 gap-8  lg:gap-7 max-w-7xl mx-auto">
                     {pricingPlans.map((plan, index) => (
                         <motion.div
                             key={index}
@@ -94,15 +94,15 @@ export const Pricing = () => {
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
                             transition={{ duration: 0.5, delay: index * 0.1 }}
-                            className={`relative rounded-2xl p-6 sm:p-7 md:p-8 backdrop-blur-sm transition-all duration-300 h-full flex flex-col ${
+                            className={`relative mt-4 rounded-2xl p-6 sm:p-7 md:p-8 backdrop-blur-sm transition-all duration-300 h-full flex flex-col ${
                                 plan.popular
-                                    ? "bg-gradient-to-b from-primary/20 via-primary/10 to-transparent border-2 border-primary/50 shadow-xl shadow-primary/20 md:scale-105"
+                                    ? "bg-linear-to-b from-primary/20 via-primary/10 to-transparent border-2 border-primary/50 shadow-xl shadow-primary/20 md:scale-105"
                                     : "bg-white/5 border border-white/10 hover:border-primary/30"
                             }`}
                         >
                             {/* Popular Badge */}
                             {plan.popular && (
-                                <div className="absolute -top-3 sm:-top-4 left-1/2 -translate-x-1/2 px-4 sm:px-5 py-1 sm:py-1.5 bg-primary rounded-full text-dark font-bold text-xs sm:text-sm flex items-center gap-1.5 shadow-lg">
+                                <div className="absolute -top-3 sm:-top-4 left-1/2 -translate-x-1/2 px-4 sm:px-5 py-1 sm:py-1.5 bg-[#00F6FF] rounded-full text-black text-dark font-bold text-xs sm:text-sm flex items-center gap-1.5 shadow-lg">
                                     <Sparkles size={14} />
                                     Most Popular
                                 </div>
@@ -125,10 +125,10 @@ export const Pricing = () => {
                             </div>
 
                             {/* Features List */}
-                            <ul className="space-y-3 sm:space-y-4 mb-6 sm:mb-8 flex-grow">
+                            <ul className="space-y-3 sm:space-y-4 mb-6 sm:mb-8 grow">
                                 {plan.features.map((feature, idx) => (
                                     <li key={idx} className="flex items-start gap-3">
-                                        <div className={`flex-shrink-0 w-5 h-5 sm:w-6 sm:h-6 rounded-full flex items-center justify-center ${
+                                        <div className={`shrink-0 w-5 h-5 sm:w-6 sm:h-6 rounded-full flex items-center justify-center ${
                                             plan.popular ? "bg-primary/20" : "bg-white/10"
                                         }`}>
                                             <Check size={14} className={plan.popular ? "text-primary" : "text-white"} />

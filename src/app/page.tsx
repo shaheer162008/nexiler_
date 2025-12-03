@@ -14,8 +14,12 @@ import { TrustBadges } from "@/components/TrustBadges";
 import { MoneyBackGuarantee } from "@/components/MoneyBackGuarantee";
 import { Pricing } from "@/components/Pricing";
 import { Newsletter } from "@/components/Newsletter";
+import { homeMetadata } from "@/lib/metadata";
+
+export const metadata = homeMetadata;
 
 export default function Home() {
+
   return (
     <main className="min-h-screen">
       <Navbar />
